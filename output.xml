@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.4 on win32)" generated="2024-07-10T08:36:29.779089" rpa="false" schemaversion="5">
+<suite id="s1" name="Preenchimento Incorreto" source="d:\Área de Trabalho\curso-robot\apk-organo\testes\preenchimento_incorreto.robot">
+<test id="s1-t1" name="Verificar se quando um campo obrigatório não for preenchido corretamente, o sistema exibe uma mensagem de campo obrigatório" line="7">
+<kw name="Dado que eu acesse o Organo" owner="setup_teardown" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-07-10T08:36:30.288835" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000/'.</msg>
+<arg>url=${URL}</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-07-10T08:36:30.288835" elapsed="1.873529"/>
+</kw>
+<status status="PASS" start="2024-07-10T08:36:30.287944" elapsed="1.874420"/>
+</kw>
+<kw name="Dado que eu clique no botão criar card" owner="cadastro">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-10T08:36:32.165058" level="INFO">Clicking element 'id:form-botao'.</msg>
+<arg>${BOTAO_CARD}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-10T08:36:32.164059" elapsed="0.051042"/>
+</kw>
+<status status="PASS" start="2024-07-10T08:36:32.163934" elapsed="0.052166"/>
+</kw>
+<kw name="Então o sistema deve apresentar mensagem de campo obrigatório" owner="cadastro">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-10T08:36:32.236470" level="INFO">Element 'id:form-nome-erro' is displayed.</msg>
+<arg>id:form-nome-erro</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-10T08:36:32.217118" elapsed="0.020341"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-10T08:36:32.282658" level="INFO">Element 'id:form-cargo-erro' is displayed.</msg>
+<arg>id:form-cargo-erro</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-10T08:36:32.237459" elapsed="0.045199"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-07-10T08:36:32.302752" level="INFO">Element 'id:form-times-erro' is displayed.</msg>
+<arg>id:form-times-erro</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-10T08:36:32.283657" elapsed="0.020092"/>
+</kw>
+<status status="PASS" start="2024-07-10T08:36:32.216100" elapsed="0.087649"/>
+</kw>
+<kw name="Fechar o navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-07-10T08:36:32.304907" elapsed="2.102680"/>
+</kw>
+<status status="PASS" start="2024-07-10T08:36:32.303749" elapsed="2.103838"/>
+</kw>
+<status status="PASS" start="2024-07-10T08:36:30.286820" elapsed="4.123100"/>
+</test>
+<status status="PASS" start="2024-07-10T08:36:29.782982" elapsed="4.632082"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Preenchimento Incorreto">Preenchimento Incorreto</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
